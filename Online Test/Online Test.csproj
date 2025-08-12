@@ -1,0 +1,682 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B87EFB0-CC66-45B5-A79E-3EF410B941E2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Online_Test</RootNamespace>
+    <AssemblyName>Online Test</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44344</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Add Questionarry.aspx" />
+    <Content Include="Admin\AddExam.aspx" />
+    <Content Include="Admin\Adminhome.aspx" />
+    <Content Include="Admin\Adminlogin.aspx" />
+    <Content Include="Admin\ApproveExam.aspx" />
+    <Content Include="Admin\Changepassword.aspx" />
+    <Content Include="Admin\ExamList.aspx" />
+    <Content Include="Admin\ManageStudent.aspx" />
+    <Content Include="Admin\ManageTeacher.aspx" />
+    <Content Include="Admin\SendNotification.aspx" />
+    <Content Include="Admin\FacultyNotification.aspx" />
+    <Content Include="Admin\SubjectAllocation.aspx" />
+    <Content Include="App_Data\OnlineTest.mdf" />
+    <Content Include="App_Data\OnlineTest_log.ldf">
+      <DependentUpon>OnlineTest.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ProjectDatabase.mdf" />
+    <Content Include="App_Data\ProjectDatabase_log.ldf">
+      <DependentUpon>ProjectDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Images\1440px-Willingdon_College,_Sangli.jpg" />
+    <Content Include="Images\about-us-2.png" />
+    <Content Include="Images\adminlogo.jpj.jpg" />
+    <Content Include="Images\bg1.jpg" />
+    <Content Include="Images\contact-us-banner.jpg" />
+    <Content Include="Images\cropped-online-logo.png" />
+    <Content Include="Images\Deccan_Education_Society_Logo.jpg" />
+    <Content Include="Images\email-calendar-feedback-banner.jpg" />
+    <Content Include="Images\examlogin.jpg" />
+    <Content Include="Images\f3.jpg" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\user1.png" />
+    <Content Include="Report\AddExamReport.aspx" />
+    <Content Include="Report\datewisereport.aspx" />
+    <Content Include="Report\EnquiryReport.aspx" />
+    <Content Include="Report\FacultyNotification_Report.aspx" />
+    <Content Include="Report\Faculty_registration.aspx" />
+    <Content Include="Report\FeedbackReport.aspx" />
+    <Content Include="Report\Questionaryreport.aspx" />
+    <Content Include="Report\Student Registration.aspx" />
+    <Content Include="Report\StudentNotification_Report.aspx" />
+    <Content Include="Report\SubjectAllocation_Report.aspx" />
+    <Content Include="Student\Exam.aspx" />
+    <Content Include="Student\Feedback.aspx" />
+    <Content Include="Student\home.aspx" />
+    <Content Include="Student\Inbox.aspx" />
+    <Content Include="Student\MyProfile.aspx" />
+    <Content Include="Student\Online Test.aspx" />
+    <Content Include="Student\StartExam.aspx" />
+    <Content Include="Student\Studenthome.aspx" />
+    <Content Include="Student\View Result.aspx" />
+    <Content Include="Teacher\AddExam.aspx" />
+    <Content Include="Teacher\addquestionary.aspx" />
+    <Content Include="Teacher\ExamList.aspx" />
+    <Content Include="Teacher\Getnotification.aspx" />
+    <Content Include="Teacher\MyProfile.aspx" />
+    <Content Include="Teacher\sendnotification.aspx" />
+    <Content Include="Teacher\SetQuestionPaper.aspx" />
+    <Content Include="Teacher\TeacherHome.aspx" />
+    <Content Include="User\About.aspx" />
+    <Content Include="User\Enquiry.aspx" />
+    <Content Include="User\Feedback.aspx" />
+    <Content Include="User\Home.aspx" />
+    <Content Include="User\Online Test.aspx" />
+    <Content Include="User\Sign up.aspx" />
+    <Content Include="User\StudentLogin.aspx" />
+    <Content Include="User\StudentRegistration.aspx" />
+    <Content Include="User\TeacherLogin.aspx" />
+    <Content Include="User\TeacherRegistration.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\ApproveExam.aspx.cs">
+      <DependentUpon>ApproveExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ApproveExam.aspx.designer.cs">
+      <DependentUpon>ApproveExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FacultyNotification.aspx.cs">
+      <DependentUpon>FacultyNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FacultyNotification.aspx.designer.cs">
+      <DependentUpon>FacultyNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SubjectAllocation.aspx.cs">
+      <DependentUpon>SubjectAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SubjectAllocation.aspx.designer.cs">
+      <DependentUpon>SubjectAllocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\datewisereport.aspx.cs">
+      <DependentUpon>datewisereport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\datewisereport.aspx.designer.cs">
+      <DependentUpon>datewisereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FacultyNotification_Report.aspx.cs">
+      <DependentUpon>FacultyNotification_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\FacultyNotification_Report.aspx.designer.cs">
+      <DependentUpon>FacultyNotification_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Feedback.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Feedback.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Enquiry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enquiry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\EnquiryReport.aspx.cs">
+      <DependentUpon>EnquiryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\EnquiryReport.aspx.designer.cs">
+      <DependentUpon>EnquiryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FeedbackReport.aspx.cs">
+      <DependentUpon>FeedbackReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\FeedbackReport.aspx.designer.cs">
+      <DependentUpon>FeedbackReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Questionaryreport.aspx.cs">
+      <DependentUpon>Questionaryreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Questionaryreport.aspx.designer.cs">
+      <DependentUpon>Questionaryreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\QuestionaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuestionaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\AddExam.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddExam.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\Add Questionarry.aspx.cs">
+      <DependentUpon>Add Questionarry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Add Questionarry.aspx.designer.cs">
+      <DependentUpon>Add Questionarry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddExam.aspx.cs">
+      <DependentUpon>AddExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddExam.aspx.designer.cs">
+      <DependentUpon>AddExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Adminhome.aspx.cs">
+      <DependentUpon>Adminhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminhome.aspx.designer.cs">
+      <DependentUpon>Adminhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Adminlogin.aspx.cs">
+      <DependentUpon>Adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminlogin.aspx.designer.cs">
+      <DependentUpon>Adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Changepassword.aspx.cs">
+      <DependentUpon>Changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Changepassword.aspx.designer.cs">
+      <DependentUpon>Changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ExamList.aspx.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ExamList.aspx.designer.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageStudent.aspx.cs">
+      <DependentUpon>ManageStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageStudent.aspx.designer.cs">
+      <DependentUpon>ManageStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageTeacher.aspx.cs">
+      <DependentUpon>ManageTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageTeacher.aspx.designer.cs">
+      <DependentUpon>ManageTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SendNotification.aspx.cs">
+      <DependentUpon>SendNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SendNotification.aspx.designer.cs">
+      <DependentUpon>SendNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\AddExamReport.aspx.cs">
+      <DependentUpon>AddExamReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\AddExamReport.aspx.designer.cs">
+      <DependentUpon>AddExamReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Faculty_registration.aspx.cs">
+      <DependentUpon>Faculty_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Faculty_registration.aspx.designer.cs">
+      <DependentUpon>Faculty_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Faculty_registration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Faculty_registration.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Registration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registration.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Student Registration.aspx.cs">
+      <DependentUpon>Student Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Student Registration.aspx.designer.cs">
+      <DependentUpon>Student Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\StudentNotification_Report.aspx.cs">
+      <DependentUpon>StudentNotification_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\StudentNotification_Report.aspx.designer.cs">
+      <DependentUpon>StudentNotification_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SubjectAllocation_Report.aspx.cs">
+      <DependentUpon>SubjectAllocation_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\SubjectAllocation_Report.aspx.designer.cs">
+      <DependentUpon>SubjectAllocation_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\StudentNotification.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentNotification.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Student\Exam.aspx.cs">
+      <DependentUpon>Exam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Exam.aspx.designer.cs">
+      <DependentUpon>Exam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Online Test.aspx.cs">
+      <DependentUpon>Online Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Online Test.aspx.designer.cs">
+      <DependentUpon>Online Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StartExam.aspx.cs">
+      <DependentUpon>StartExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StartExam.aspx.designer.cs">
+      <DependentUpon>StartExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Studenthome.aspx.cs">
+      <DependentUpon>Studenthome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Studenthome.aspx.designer.cs">
+      <DependentUpon>Studenthome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentMaster.Master.cs">
+      <DependentUpon>StudentMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentMaster.Master.designer.cs">
+      <DependentUpon>StudentMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Student\View Result.aspx.cs">
+      <DependentUpon>View Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\View Result.aspx.designer.cs">
+      <DependentUpon>View Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Subjectallocation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Subjectallocation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TeacherNotification.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeacherNotification.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddExam.aspx.cs">
+      <DependentUpon>AddExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddExam.aspx.designer.cs">
+      <DependentUpon>AddExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\addquestionary.aspx.cs">
+      <DependentUpon>addquestionary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\addquestionary.aspx.designer.cs">
+      <DependentUpon>addquestionary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\ExamList.aspx.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\ExamList.aspx.designer.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Getnotification.aspx.cs">
+      <DependentUpon>Getnotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Getnotification.aspx.designer.cs">
+      <DependentUpon>Getnotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\sendnotification.aspx.cs">
+      <DependentUpon>sendnotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\sendnotification.aspx.designer.cs">
+      <DependentUpon>sendnotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\SetQuestionPaper.aspx.cs">
+      <DependentUpon>SetQuestionPaper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\SetQuestionPaper.aspx.designer.cs">
+      <DependentUpon>SetQuestionPaper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherHome.aspx.cs">
+      <DependentUpon>TeacherHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherHome.aspx.designer.cs">
+      <DependentUpon>TeacherHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherMaster.Master.cs">
+      <DependentUpon>TeacherMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherMaster.Master.designer.cs">
+      <DependentUpon>TeacherMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Enquiry.aspx.cs">
+      <DependentUpon>Enquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Enquiry.aspx.designer.cs">
+      <DependentUpon>Enquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Online Test.aspx.cs">
+      <DependentUpon>Online Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Online Test.aspx.designer.cs">
+      <DependentUpon>Online Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Sign up.aspx.cs">
+      <DependentUpon>Sign up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Sign up.aspx.designer.cs">
+      <DependentUpon>Sign up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\StudentLogin.aspx.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\StudentLogin.aspx.designer.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\StudentRegistration.aspx.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\StudentRegistration.aspx.designer.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TeacherLogin.aspx.cs">
+      <DependentUpon>TeacherLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TeacherLogin.aspx.designer.cs">
+      <DependentUpon>TeacherLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\TeacherRegistration.aspx.cs">
+      <DependentUpon>TeacherRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\TeacherRegistration.aspx.designer.cs">
+      <DependentUpon>TeacherRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserMaster.Master.cs">
+      <DependentUpon>UserMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserMaster.Master.designer.cs">
+      <DependentUpon>UserMaster.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminMaster.Master" />
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="User\UserMaster.Master" />
+    <Content Include="Student\StudentMaster.Master" />
+    <Content Include="Teacher\TeacherMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\Feedback.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Feedback.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Enquiry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Enquiry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\QuestionaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuestionaryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\AddExam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AddExam.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Faculty_registration.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Faculty_registration.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Registration.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Registration.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Subjectallocation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Subjectallocation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\StudentNotification.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentNotification.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TeacherNotification.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TeacherNotification.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50547</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44344/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

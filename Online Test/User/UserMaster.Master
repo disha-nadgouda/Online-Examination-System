@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="Online_Test.User.UserMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            border: 1px solid #000000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .style5
+        {
+            
+        }
+        .style4
+        {
+            font-family: "Bahnschrift SemiBold SemiConden";
+        }
+        .style3
+        {
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .style2
+        {
+           
+        }
+        .auto-style1 {
+            width: 155px;
+        }
+        .auto-style2 {
+         
+        }
+        .auto-style4 {
+            font-size: medium;
+        }
+        .auto-style5 {
+            text-align: center;
+        }
+        .auto-style6 {
+            color: #003300;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+    <table align="center" cellpadding="0" cellspacing="0" class="style1" style="border-style: solid; border-top-width: thick; border-top-color: #800000">
+        <tr>
+            <td 
+                
+                style="font-size: xx-large; font-weight: 700; color: #000099; " class="auto-style1">
+               <asp:Image ID="Image1" runat="server" Height="84px" Width="350px" 
+                    ImageUrl="~/Images/cropped-online-logo.png" />
+               </td>
+            <td class="style5" 
+                style="font-size: x-large; font-weight: 700; color: #000099">
+                &nbsp;&nbsp; <span class="style4">
+                <span class="style3">&nbsp;</span></span></td>
+            <td style="text-align: right" class="style2">
+                <table align="right" cellpadding="5" cellspacing="5">
+                    <tr>
+                        <td class="auto-style6">
+                            <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/user.png" Width="30px" />
+                        </td>
+                        <td class="auto-style6">
+                            <strong>Welcome User</strong></td>
+                        <td>
+                            <asp:Menu ID="Menu1" runat="server" ForeColor="Black" style="font-weight: 700; text-align: center;" 
+                                Height="40px" Orientation="Horizontal" RenderingMode="Table" Width="100px" 
+                                Font-Bold="True">
+                                <DynamicMenuItemStyle ItemSpacing="5px" VerticalPadding="5px" Font-Size="Medium" Font-Bold="True" HorizontalPadding="5" />
+                                <DynamicMenuStyle VerticalPadding="5px" Width="120" />
+                                <Items>
+                                    <asp:MenuItem Text="Login" Value="Login">
+                                        <asp:MenuItem NavigateUrl="~/Admin/Adminlogin.aspx" Text="Admin Login" 
+                                            Value="Admin Login"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/User/TeacherLogin.aspx" Text="Teacher Login" 
+                                            Value="Teacher Login"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/User/StudentLogin.aspx" Text="Student Login" 
+                                            Value="Student Login"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </td>
+                        <td>
+                            <asp:Button ID="Button1" runat="server" BorderStyle="None" ForeColor="White" 
+                                Height="35px" style="font-weight: 700; border-radius:15px;" 
+                                Text="Sign Up" Width="120px" PostBackUrl="~/User/Sign up.aspx" BackColor="#CC3300" CssClass="auto-style2" />
+                        </td>
+                    </tr>
+                </table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="auto-style5">
+                <asp:Menu ID="Menu2" runat="server" CssClass="auto-style4" Orientation="Horizontal" RenderingMode="Table" BackColor="Black" ForeColor="White" Height="40px" Width="100%">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/User/Home.aspx" Text="HOME" Value="New Item"></asp:MenuItem>
+                        <asp:MenuItem Text="ONLINE TEST" Value="New Item" NavigateUrl="~/User/Online Test.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="FEEDBACK" Value="New Item" NavigateUrl="~/User/Feedback.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="CONTACT" Value="New Item" NavigateUrl="~/User/Enquiry.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="ABOUT US" Value="New Item" NavigateUrl="~/User/About.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                <marquee width='100%' behavior="alternate"> Project By Saniya Momin And Disha Nadgouda</marquee>
+                &nbsp;</td>
+        </tr>
+        
+    </table>
+    </form>
+    
+</body>
+</html>
